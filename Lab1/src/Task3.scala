@@ -8,10 +8,10 @@ object Task3 {
     println("Iteracja przy użyciu rekurencji ogonowej")
     println(tailRecursionIteration(daysOfWeek, ""))
 
-    @tailrec
-    def tailRecursionIteration(list: List[String], accumulator: String): String = list match {
-      case Nil => accumulator
-      case head :: tail => tailRecursionIteration(tail, accumulator.concat(head).concat(", "))
-    }
+  }
+  @tailrec
+  def tailRecursionIteration(list: List[String], accumulator: String): String = list match {
+    case Nil => accumulator
+    case head :: tail => tailRecursionIteration(tail, accumulator.concat(head).concat(", "))
   }
 }

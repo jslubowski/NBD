@@ -10,24 +10,25 @@ object Task2 {
     println("Iteracja przy użyciu rekurencji od końca")
     println(backwardRecursionIteration(daysOfWeek))
 
-    def recursionIteration(list: List[String]): String = {
-      def getPrev(list: List[String], index: Int): String = {
-        if (index == 0) {
-          list(index).concat(", ")
-        }
-        else getPrev(list, index - 1) + list(index).concat(", ")
+  }
+
+  def recursionIteration(list: List[String]): String = {
+    def getPrev(list: List[String], index: Int): String = {
+      if (index == 0) {
+        list(index).concat(", ")
       }
-      getPrev(list, list.length - 1)
+      else getPrev(list, index - 1) + list(index).concat(", ")
+    }
+    getPrev(list, list.length - 1)
+  }
+
+  def backwardRecursionIteration(list: List[String]): String = {
+    def getNext(list: List[String], index: Int): String = {
+      if (index == list.length - 1) {
+        list(index).concat(", ")
+      } else getNext(list, index + 1) + list(index).concat(", ")
     }
 
-    def backwardRecursionIteration(list: List[String]): String = {
-      def getNext(list: List[String], index: Int): String = {
-        if (index == list.length - 1) {
-          list(index).concat(", ")
-        } else getNext(list, index + 1) + list(index).concat(", ")
-      }
-
-      getNext(list, 0)
-    }
+    getNext(list, 0)
   }
 }

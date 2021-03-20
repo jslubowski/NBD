@@ -15,34 +15,33 @@ object Task1 {
     println("Pętla while")
     println(whileLoopIteration(daysOfWeek))
 
+  }
 
-    def forLoopIteration(list: List[String]): String = {
-      var result = ""
-      for (i <- list.indices) {
-        result += list(i)
-        if (i != list.length - 1) result += ", "
-      }
-      result
-    }
-
-    def forLoopStartingWithP(list: List[String]): String = {
-      var result = ""
-      for (i <- list.indices) {
-        if (list(i).take(1) == "P") result += list(i).concat(", ")
-      }
-      result
-    }
-
-    def whileLoopIteration(list: List[String]): String = {
-      var i = 0
-      var result = ""
-      while(i < list.length - 1) {
-        result += list(i).concat(", ")
-        i += 1
-      }
+  def forLoopIteration(list: List[String]): String = {
+    var result = ""
+    for (i <- list.indices) {
       result += list(i)
-      result
+      if (i != list.length - 1) result += ", "
     }
+    result
+  }
 
+  def forLoopStartingWithP(list: List[String]): String = {
+    var result = ""
+    for (i <- list.indices) {
+      if (list(i).take(1) == "P") result += list(i).concat(", ")
+    }
+    result
+  }
+
+  def whileLoopIteration(list: List[String]): String = {
+    var i = 0
+    var result = ""
+    while(i < list.length - 1) {
+      result += list(i).concat(", ")
+      i += 1
+    }
+    result += list(i)
+    result
   }
 }
