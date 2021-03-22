@@ -1,5 +1,6 @@
 object Task6 {
-  def main(args: Array[String]): Unit = {
+  def main(): Unit = {
+    println("\n\n======== Zadanie 6 ========")
 
     val tuple = (1, "Ogórek", 5.5)
     println("Wypisywanie trójwartościowej krotki za pomocą funkcji")

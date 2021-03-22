@@ -1,5 +1,6 @@
 object Task7 {
-  def main(args: Array[String]): Unit = {
+  def main(): Unit = {
+    println("\n\n======== Zadanie 7 ========")
     val products = Map(
       "Jabłko" -> 4.0,
       "Ziemniak" -> 2.0,

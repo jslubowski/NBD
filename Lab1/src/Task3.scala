@@ -1,7 +1,8 @@
 import scala.annotation.tailrec
 
 object Task3 {
-  def main(args: Array[String]): Unit = {
+  def main(): Unit = {
+    println("\n\n======== Zadanie 3 ========")
     val daysOfWeek = List("Poniedziałek", "Wtorek", "Środa", "Czwartek",
       "Piątek", "Sobota", "Niedziela")
 

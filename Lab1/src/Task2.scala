@@ -1,5 +1,6 @@
 object Task2 {
-  def main(args: Array[String]): Unit = {
+  def main(): Unit = {
+    println("\n\n======== Zadanie 2 ========")
     val daysOfWeek = List("Poniedziałek", "Wtorek", "Środa", "Czwartek",
       "Piątek", "Sobota", "Niedziela")
 
