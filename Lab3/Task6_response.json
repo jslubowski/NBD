@@ -1,0 +1,8 @@
+{
+    "acknowledged": true,
+    "insertedIds": {
+      "0": {
+        "$oid": "6092c43e9356844ce42865c9"
+      }
+    }
+  }

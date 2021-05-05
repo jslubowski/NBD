@@ -1,0 +1,23 @@
+{
+    "result": {
+      "n": 123,
+      "ok": 1
+    },
+    "connection": {
+      "_events": {},
+      "_eventsCount": 4,
+      "_maxListeners": null,
+      "id": 1,
+      "address": "127.0.0.1:27017",
+      "bson": {},
+      "socketTimeout": 0,
+      "host": "localhost",
+      "port": 27017,
+      "monitorCommands": false,
+      "closed": false,
+      "destroyed": false,
+      "lastIsMasterMS": 1
+    },
+    "n": 123,
+    "ok": 1
+  }
