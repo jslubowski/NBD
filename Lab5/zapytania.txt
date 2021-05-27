@@ -1,0 +1,56 @@
+1. 
+match(movies:Movie) return movies
+
+2.
+match(actor:Person)-[r:ACTED_IN]->(movie)
+where actor.name = "Hugo Weaving"
+return movie
+
+3.
+match(actor:Person)-[r:ACTED_IN]->(movie)
+where actor.name = "Hugo Weaving"
+with movie as movie
+match (movie)<-[:DIRECTED]-(director:Person)
+return director
+
+4.
+match(actor:Person)-[r:ACTED_IN]->(movie:Movie)
+where actor.name = "Hugo Weaving"
+with movie as movie
+match(movie)<-[r:ACTED_IN]-(actor)
+return actor
+
+5.
+match (movie:Movie {title:"The Matrix"})
+with movie as matrix
+match (actor:Person)-[:ACTED_IN]->(matrix)
+return actor
+
+6.
+match(actor:Person)-[r:ACTED_IN]->(movie)
+with actor, count(r) as starred_in
+return actor, starred_in
+
+7.
+match(p:Person)-[:DIRECTED]->(movie:Movie)
+with p, movie
+match (p)-[:WROTE]->(movie)
+return p, movie
+
+8.
+match (keanu:Person {name: "Keanu Reeves"})-[:ACTED_IN]->(movie)
+with keanu, movie
+match (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movie)
+return keanu, hugo, movie
+
+9.
+create 
+(movie:Movie {title: "Captain America: The First Avenger", released: 2011}),
+(director:Person {name: "Joe Johnston"})-[:DIRECTED]->(movie),
+(writer: Person {name: "Christopher Markus"})-[:WROTE]->(movie),
+(cevans:Person {name: "Chris Evans"})-[:ACTED_IN]->(movie),
+(hatwell:Person {name: "Hayley Atwell"})-[:ACTED_IN]->(movie),
+(sstan:Person {name: "Sebastian Stan"})-[:ACTED_IN]->(movie)
+
+match(p:Person)-[r]->(m:Movie {title: "Captain America: The First Avenger"})
+return p, r, m
