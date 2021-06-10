@@ -1,0 +1,94 @@
+[
+    {
+      "routes": {
+  "start": {
+  "identity": 208,
+  "labels": [
+            "Airport"
+          ],
+  "properties": {
+  "name": "MSN"
+          }
+        },
+  "end": {
+  "identity": 202,
+  "labels": [
+            "Airport"
+          ],
+  "properties": {
+  "name": "IND"
+          }
+        },
+  "segments": [
+          {
+            "start": {
+  "identity": 208,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "MSN"
+              }
+            },
+            "relationship": {
+  "identity": 2179,
+  "start": 208,
+  "end": 194,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/30/2015 05:26:41",
+  "duration": 30,
+  "distance": 108,
+  "airline": "19977",
+  "price": 88.5
+              }
+            },
+            "end": {
+  "identity": 194,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "ORD"
+              }
+            }
+          },
+          {
+            "start": {
+  "identity": 194,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "ORD"
+              }
+            },
+            "relationship": {
+  "identity": 2202,
+  "start": 202,
+  "end": 194,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/30/2015 17:30:21",
+  "duration": 47,
+  "distance": 177,
+  "airline": "19977",
+  "price": 144.0
+              }
+            },
+            "end": {
+  "identity": 202,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "IND"
+              }
+            }
+          }
+        ],
+  "length": 2.0
+      },
+      "totalPrice": 232.5
+    }
+  ]

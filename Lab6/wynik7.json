@@ -1,0 +1,160 @@
+[
+    {
+      "routes": {
+  "start": {
+  "identity": 192,
+  "labels": [
+            "Airport"
+          ],
+  "properties": {
+  "name": "LAX"
+          }
+        },
+  "end": {
+  "identity": 257,
+  "labels": [
+            "Airport"
+          ],
+  "properties": {
+  "name": "DAY"
+          }
+        },
+  "segments": [
+          {
+            "start": {
+  "identity": 192,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "LAX"
+              }
+            },
+            "relationship": {
+  "identity": 2290,
+  "start": 192,
+  "end": 212,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/29/2015 07:39:45",
+  "duration": 40,
+  "distance": 236,
+  "airline": "19977",
+  "price": 186.75
+              }
+            },
+            "end": {
+  "identity": 212,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "LAS"
+              }
+            }
+          },
+          {
+            "start": {
+  "identity": 212,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "LAS"
+              }
+            },
+            "relationship": {
+  "identity": 2268,
+  "start": 212,
+  "end": 204,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/29/2015 13:53:54",
+  "duration": 80,
+  "distance": 628,
+  "airline": "19977",
+  "price": 490.5
+              }
+            },
+            "end": {
+  "identity": 204,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "DEN"
+              }
+            }
+          },
+          {
+            "start": {
+  "identity": 204,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "DEN"
+              }
+            },
+            "relationship": {
+  "identity": 2272,
+  "start": 195,
+  "end": 204,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/29/2015 16:19:49",
+  "duration": 108,
+  "distance": 680,
+  "airline": "19977",
+  "price": 537.0
+              }
+            },
+            "end": {
+  "identity": 195,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "MSP"
+              }
+            }
+          },
+          {
+            "start": {
+  "identity": 195,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "MSP"
+              }
+            },
+            "relationship": {
+  "identity": 2411,
+  "start": 195,
+  "end": 257,
+  "type": "ECONOMY_DIRECT",
+  "properties": {
+  "date": "11/23/2015 09:37:48",
+  "duration": 70,
+  "distance": 574,
+  "airline": "20304",
+  "price": 447.75
+              }
+            },
+            "end": {
+  "identity": 257,
+  "labels": [
+                "Airport"
+              ],
+  "properties": {
+  "name": "DAY"
+              }
+            }
+          }
+        ],
+  "length": 4.0
+      },
+      "flightPrice": 1662.0
+    }
+  ]

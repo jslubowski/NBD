@@ -1,0 +1,112 @@
+1. 
+match (darjeeling: town {name: "Darjeeling"}), (sandakphu:peak {name : "Sandakphu"})
+with darjeeling, sandakphu
+match path = ShortestPath((darjeeling)-[*]-(sandakphu))
+return path
+
+2.
+match (darjeeling: town {name: "Darjeeling"}), (sandakphu:peak {name : "Sandakphu"})
+with darjeeling, sandakphu
+match path = ShortestPath((darjeeling)-[rels*]-(sandakphu))
+where all (r in rels where r.winter = 'true')
+return path
+
+
+3.
+match path = (darjeeling:town {name:"Darjeeling"})-[*]->(sandakphu:peak {name:"Sandakphu"})
+return path, reduce(distance = 0,p in relationships(path) | distance + p.distance) as route
+order by route 
+
+4.
+match (airport:Airport)<-[r:ORIGIN]-(flight:Flight)
+return airport,r, flight, count(r) as origins order by origins
+
+======= create DIRECT_FLIGHT relations =======
+match (o:Airport)<-[r:ORIGIN]-(flight:Flight)-[t:DESTINATION]->(d:Airport)
+with o,flight,d
+create (o)-[:DIRECT_FLIGHT 
+{airline: flight.airline,
+date: flight.date,
+distance: flight.distance,
+duration: flight.duration,
+economyPrice: [(flight)<-[:ASSIGN]-(ticket {class: "economy"}) | ticket.price][0],
+businessPrice: [(flight)<-[:ASSIGN]-(ticket {class: "business"}) | ticket.price][0],
+firstClassPrice: [(flight)<-[:ASSIGN]-(ticket {class: "firstClass"}) | ticket.price][0]
+}]->(d)
+=================================================
+
+======= create <BUSINESS || ECONOMY || FIRST CLASS>_DIRECT relation =======
+// you should insert one of the words from <> in order to create a relation
+
+match (o:Airport)<-[r:ORIGIN]-(flight:Flight)-[t:DESTINATION]->(d:Airport)
+with o,flight,d
+create (o)-[:<BUSINESS || ECONOMY || FIRST CLASS>_DIRECT
+{airline: flight.airline,
+date: flight.date,
+distance: flight.distance,
+duration: flight.duration,
+economyPrice: [(flight)<-[:ASSIGN]-(ticket {class: <"economy" || "business" || "firstClass" >}) | ticket.price][0]
+}]->(d)
+============================================================================
+
+5. // best i could do without PC blowing up
+match routes = (lax:Airport {name : "LAX"})<-[r:ECONOMY_DIRECT|BUSINESS_DIRECT|FIRST_CLASS_DIRECT*..3]->(destination:Airport)
+with destination, routes
+where destination.name <> "LAX"
+with destination, routes, reduce(
+    total = 0,
+    flight in relationships(routes)|
+    total + flight.price
+) as flightPrice
+where flightPrice < 3000
+return routes, flightPrice
+order by flightPrice asc
+limit 2000
+
+6.
+match routes = (lax:Airport {name : "LAX"})<-[r:ECONOMY_DIRECT|BUSINESS_DIRECT|FIRST_CLASS_DIRECT*..4]->(day:Airport {name: "DAY"})
+with routes, reduce(
+    total = 0,
+    flight in relationships(routes) |
+    total + flight.price
+) as flightPrice
+return routes, flightPrice
+order by flightPrice asc
+limit 2000
+
+7.
+match routes = (lax:Airport {name : "LAX"})<-[r:ECONOMY_DIRECT|BUSINESS_DIRECT|FIRST_CLASS_DIRECT*..4]->(day:Airport {name: "DAY"})
+with routes, reduce(
+    total = 0,
+    flight in relationships(routes) |
+    total + flight.price
+) as flightPrice
+return routes, flightPrice
+order by flightPrice asc
+limit 1
+
+8.
+match routes = (lax:Airport {name : "LAX"})<-[r:BUSINESS_DIRECT*..4]->(day:Airport {name: "DAY"})
+with routes, reduce(
+    total = 0,
+    flight in relationships(routes) |
+    total + flight.price
+) as flightPrice
+return routes, flightPrice
+order by flightPrice asc
+limit 1
+
+9.
+MATCH (origin: Airport)-[flight:DIRECT_FLIGHT]->(destination: Airport)
+WITH flight, origin, destination, (collect(origin) + collect(destination)) AS airports
+UNWIND (airports) AS airport
+return flight.airline, count(distinct airport) as airports_served
+
+10.
+match routes =(origin:Airport)-[e1:ECONOMY_DIRECT]->(transfer:Airport)<-[e2:ECONOMY_DIRECT]-(destination:Airport)
+with routes, origin, destination,(e1.price + e2.price) as totalPrice 
+where origin <> destination
+return routes, totalPrice
+order by totalPrice
+limit 1
+
