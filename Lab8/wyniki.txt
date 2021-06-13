@@ -1,0 +1,15 @@
+Storing object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Fetching object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Fetching succeeded!
+Object fetched: 
+BankAccount{id='fe278cc1-3c4b-4563-b840-7c5327238066', name='John Doe', creditCardNumber='5201430470369401', balance=10005.65}
+John Doe balance modified to 5005.65
+Storing object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Fetching object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Fetching succeeded!
+Object fetched: 
+BankAccount{id='fe278cc1-3c4b-4563-b840-7c5327238066', name='John Doe', creditCardNumber='5201430470369401', balance=5005.65}
+Removing object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Object removed successfully!
+Fetching object with ID fe278cc1-3c4b-4563-b840-7c5327238066
+Can't find item with ID: fe278cc1-3c4b-4563-b840-7c5327238066

@@ -1,0 +1,45 @@
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/bigcorp?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 147
+>
+} [147 bytes data]
+* upload completely sent off: 147 out of 147 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvufffIkPIpTIlMfKMOeH+S2+LAA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22953>; rel="up"
+< Last-Modified: Fri, 11 Jun 2021 15:09:16 GMT
+< ETag: "ynCSTiNEVbPBpfsYRrf9O"
+< Date: Fri, 11 Jun 2021 15:09:16 GMT
+< Content-Type: application/json
+< Content-Length: 147
+<
+{ [147 bytes data]
+100   294  100   147  100   147  16333  16333 --:--:-- --:--:-- --:--:-- 32666HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvufffIkPIpTIlMfKMOeH+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:09:16 GMT
+ETag: "ynCSTiNEVbPBpfsYRrf9O"
+Date: Fri, 11 Jun 2021 15:09:16 GMT
+Content-Type: application/json
+Content-Length: 147
+
+{
+    "name": "BigCorp Inc.",
+    "creditCardNumber": "4716 2069 5663 0362",
+    "balance": 89456777445,
+    "isCompany": true,
+    "fraud": true
+}
+* Connection #0 to host localhost left intact

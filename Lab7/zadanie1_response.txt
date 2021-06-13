@@ -1,0 +1,160 @@
+a)   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/jhf?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 107
+>
+} [107 bytes data]
+{ [107 bytes data]
+100   214  100   107  100   107  13375  13375 --:--:-- --:--:-- --:--:-- 30571HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfL+gFEUpkzmNl8PxifosvCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 14:50:49 GMT
+ETag: "2tmKJocqNrsHre5WtpqoSH"
+Date: Fri, 11 Jun 2021 14:50:49 GMT
+Content-Type: application/json
+Content-Length: 107
+
+{ "name": "Jack H. Foster", "creditCardNumber": "5286 6840 2323 0795", "balance": 100, "isCompany": false }
+* Connection #0 to host localhost left intact
+
+b)   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/eo?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 123
+>
+} [123 bytes data]
+{ [123 bytes data]
+100   246  100   123  100   123   7687   7687 --:--:-- --:--:-- --:--:-- 15375HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfL7ASIpTImMfKIPHV/BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 14:54:16 GMT
+ETag: "3bzx5M1N9WcliAHWS4skp"
+Date: Fri, 11 Jun 2021 14:54:16 GMT
+Content-Type: application/json
+Content-Length: 123
+
+{
+    "name": "Edyta Ostrowska",
+    "creditCardNumber": "4556 6918 9160 5657",
+    "balance": -4,
+    "isCompany": false
+}
+* Connection #0 to host localhost left intact
+
+c)     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/budimexpol?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 122
+>
+} [122 bytes data]
+{ [122 bytes data]
+100   244  100   122  100   122   2837   2837 --:--:-- --:--:-- --:--:--  5545HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfde87RCiRMY+Vof2b+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:00:23 GMT
+ETag: "7Sa2TXyiteNuN1X0vesxYd"
+Date: Fri, 11 Jun 2021 15:00:23 GMT
+Content-Type: application/json
+Content-Length: 122
+
+{
+    "name": "BUDIMEXPOL",
+    "creditCardNumber": "5113 3720 0952 9708",
+    "balance": 1000000,
+    "isCompany": true
+}
+
+
+d)  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/bigcorp?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 128
+>
+} [128 bytes data]
+{ [128 bytes data]
+100   256  100   128  100   128   4740   4740 --:--:-- --:--:-- --:--:--  9846HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvufffIkPIpTImMfKsOab+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:01:00 GMT
+ETag: "IiRf0BcuVEVnbImNXhDt0"
+Date: Fri, 11 Jun 2021 15:01:00 GMT
+Content-Type: application/json
+Content-Length: 128
+
+{
+    "name": "BigCorp Inc.",
+    "creditCardNumber": "4716 2069 5663 0362",
+    "balance": 89456777445,
+    "isCompany": true
+}
+* Connection #0 to host localhost left intact
+
+e)   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/rvn?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 128
+>
+} [128 bytes data]
+* upload completely sent off: 128 out of 128 bytes
+* Mark bundle as not supporting multiuse
+{ [128 bytes data]
+100   256  100   128  100   128   7111   7111 --:--:-- --:--:-- --:--:-- 15058HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvuffzLENIpTImMfK8Oub+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:02:18 GMT
+ETag: "2aSEPmh4wkVdugrBfNy5PV"
+Date: Fri, 11 Jun 2021 15:02:18 GMT
+Content-Type: application/json
+Content-Length: 128
+
+{
+    "name": "Russell V. Nakamura",
+    "creditCardNumber": "5559 4079 9728 3818",
+    "balance": 156,
+    "isCompany": false
+}
+* Connection #0 to host localhost left intact
+
+
+
+

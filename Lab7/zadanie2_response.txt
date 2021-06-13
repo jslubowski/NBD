@@ -1,0 +1,40 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> GET /buckets/s22953/keys/budimexpol?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfde87RCiRMY+Vof2b+S2+LAA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22953>; rel="up"
+< Last-Modified: Fri, 11 Jun 2021 15:00:23 GMT
+< ETag: "7Sa2TXyiteNuN1X0vesxYd"
+< Date: Fri, 11 Jun 2021 15:05:08 GMT
+< Content-Type: application/json
+< Content-Length: 122
+<
+{ [122 bytes data]
+100   122  100   122    0     0  17428      0 --:--:-- --:--:-- --:--:-- 20333HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfde87RCiRMY+Vof2b+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:00:23 GMT
+ETag: "7Sa2TXyiteNuN1X0vesxYd"
+Date: Fri, 11 Jun 2021 15:05:08 GMT
+Content-Type: application/json
+Content-Length: 122
+
+{
+    "name": "BUDIMEXPOL",
+    "creditCardNumber": "5113 3720 0952 9708",
+    "balance": 1000000,
+    "isCompany": true
+}
+* Connection #0 to host localhost left intact

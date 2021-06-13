@@ -1,0 +1,44 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/eo?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 131
+>
+} [131 bytes data]
+* upload completely sent off: 131 out of 131 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfL7ASIpTImsfKIPjT/BZfFgA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22953>; rel="up"
+< Last-Modified: Fri, 11 Jun 2021 15:11:13 GMT
+< ETag: "4ERZVkQ9a1sG5SzqjYY8Dk"
+< Date: Fri, 11 Jun 2021 15:11:13 GMT
+< Content-Type: application/json
+< Content-Length: 131
+<
+{ [131 bytes data]
+100   262  100   131  100   131  13100  13100 --:--:-- --:--:-- --:--:-- 29111HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvudfL7ASIpTImsfKIPjT/BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:11:13 GMT
+ETag: "4ERZVkQ9a1sG5SzqjYY8Dk"
+Date: Fri, 11 Jun 2021 15:11:13 GMT
+Content-Type: application/json
+Content-Length: 131
+
+{
+    "name": "Edyta Mazurek-Ostrowska",
+    "creditCardNumber": "4556 6918 9160 5657",
+    "balance": -4,
+    "isCompany": false
+}
+* Connection #0 to host localhost left intact

@@ -1,0 +1,43 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> PUT /buckets/s22953/keys/rvn?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 105
+>
+} [105 bytes data]
+* upload completely sent off: 105 out of 105 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvuffzLENIpTIlMfKcP2H+S2+LAA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22953>; rel="up"
+< Last-Modified: Fri, 11 Jun 2021 15:10:15 GMT
+< ETag: "7FNtfBEmovwgsquIRKySU"
+< Date: Fri, 11 Jun 2021 15:10:15 GMT
+< Content-Type: application/json
+< Content-Length: 105
+<
+{ [105 bytes data]
+100   210  100   105  100   105  11666  11666 --:--:-- --:--:-- --:--:-- 26250HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvuffzLENIpTIlMfKcP2H+S2+LAA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22953>; rel="up"
+Last-Modified: Fri, 11 Jun 2021 15:10:15 GMT
+ETag: "7FNtfBEmovwgsquIRKySU"
+Date: Fri, 11 Jun 2021 15:10:15 GMT
+Content-Type: application/json
+Content-Length: 105
+
+{
+    "name": "Russell V. Nakamura",
+    "creditCardNumber": "5559 4079 9728 3818",
+    "balance": 156,
+}
+* Connection #0 to host localhost left intact

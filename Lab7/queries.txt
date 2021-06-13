@@ -1,0 +1,65 @@
+1.
+a) curl -i -v -XPUT -d '{ "name": "Jack H. Foster", "creditCardNumber": "5286 6840 2323 0795", "balance": 100, "isCompany": false }' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/jhf?returnbody=true
+b) curl -i -v -XPUT -d '{
+    "name": "Edyta Ostrowska",
+    "creditCardNumber": "4556 6918 9160 5657",
+    "balance": -4,
+    "isCompany": false
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/eo?returnbody=true
+
+c) curl -i -v -XPUT -d '{
+    "name": "BUDIMEXPOL",
+    "creditCardNumber": "5113 3720 0952 9708",
+    "balance": 1000000,
+    "isCompany": true
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/eo?returnbody=true
+
+d) curl -i -v -XPUT -d '{
+    "name": "BigCorp Inc.",
+    "creditCardNumber": "4716 2069 5663 0362",
+    "balance": 89456777445,
+    "isCompany": true
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/bigcorp?returnbody=true
+
+e) curl -i -v -XPUT -d '{
+    "name": "Russell V. Nakamura",
+    "creditCardNumber": "5559 4079 9728 3818",
+    "balance": 156,
+    "isCompany": false
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/rvn?returnbody=true
+
+2.
+curl -i -v http://localhost:8098/buckets/s22953/keys/budimexpol?returnbody=true
+
+3. curl -i -v -XPUT -d '{
+    "name": "BigCorp Inc.",
+    "creditCardNumber": "4716 2069 5663 0362",
+    "balance": 89456777445,
+    "isCompany": true,
+    "fraud": true
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/bigcorp?returnbody=true
+
+4. curl -i -v -XPUT -d '{
+    "name": "Russell V. Nakamura",
+    "creditCardNumber": "5559 4079 9728 3818",
+    "balance": 156,
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/rvn?returnbody=true
+
+5. curl -i -v -XPUT -d '{
+    "name": "Edyta Mazurek-Ostrowska",
+    "creditCardNumber": "4556 6918 9160 5657",
+    "balance": -4,
+    "isCompany": false
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s22953/keys/eo?returnbody=true
+
+6. curl -i -v -X DELETE http://localhost:8098/buckets/s22953/keys/rvn?returnbody=true
+
+7. curl -i -v http://localhost:8098/buckets/s22953/keys/xxx?returnbody=true
+
+8. curl -i -v -XPOST -d '{
+    "name": "Winnie The Pooh"
+}' -H "Content-Type: application/json" http://localhost:8098/buckets/s23455/keys
+
+9. curl -i -v http://localhost:8098/buckets/s23455/keys/SYWJ4bPLjT1aybxNQPbFOWjd7Nl
+
+10. curl -i -v -X DELETE http://localhost:8098/buckets/s23455/keys/SYWJ4bPLjT1aybxNQPbFOWjd7Nl

@@ -1,0 +1,26 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:8098...
+* Connected to localhost (::1) port 8098 (#0)
+> GET /buckets/s22953/keys/xxx?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.71.1
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404 Object Not Found
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Fri, 11 Jun 2021 15:13:50 GMT
+< Content-Type: text/plain
+< Content-Length: 10
+<
+{ [10 bytes data]
+100    10  100    10    0     0   1666      0 --:--:-- --:--:-- --:--:--  1666HTTP/1.1 404 Object Not Found
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Fri, 11 Jun 2021 15:13:50 GMT
+Content-Type: text/plain
+Content-Length: 10
+
+not found
+
+* Connection #0 to host localhost left intact
